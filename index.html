@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WebODM Map Packager</title>
+    <style> /* Basic styling for clarity */
+        body { font-family: sans-serif; max-width: 800px; margin: 2em auto; }
+        .upload-section { border: 2px dashed #ccc; padding: 20px; margin-bottom: 1em; }
+        button { font-size: 1.2em; padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>WebODM Map Packager 🗺️</h1>
+    <p>This tool combines your WebODM output with your QGIS vector files into a single, ready-to-host web map.</p>
+
+    <div class="upload-section">
+        <h3>Step 1: Upload WebODM Project Folder</h3>
+        <input type="file" id="webodm_upload" webkitdirectory directory multiple>
+    </div>
+
+    <div class="upload-section">
+        <h3>Step 2: Upload QGIS GeoJSON File(s)</h3>
+        <input type="file" id="qgis_upload" multiple accept=".geojson">
+    </div>
+
+    <button id="package_button">Package & Download Map</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="packager.js"></script> </body>
+</html>
